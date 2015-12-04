@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('pet', {
+    path: 'pet/:id'
+  });
 });
 
 export default Router;
