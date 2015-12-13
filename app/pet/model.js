@@ -8,5 +8,6 @@ export default DS.Model.extend({
     breed: DS.attr('string'),
     color: DS.attr('string'),
     type: DS.attr('string'),
-    tagNumber: DS.attr('string')
+    tagNumber: DS.attr('string'),
+    dateCreated: DS.attr('date')
 });

@@ -1,7 +1,30 @@
-{{#paper-toolbar}}
-    <div class="md-toolbar-tools">
-    {{#paper-button}}Lost Paws{{/paper-button}}
-    </div>
-{{/paper-toolbar}}
+{{#paper-nav-container}}
+{{#paper-sidenav class="md-sidenav-left md-whiteframe-z2" locked-open="gt-sm"}}
+    {{#paper-toolbar}}
+        <div class="md-toolbar-tools">
+        {{#paper-button}}Lost Paws{{/paper-button}}
+        </div>
+    {{/paper-toolbar}}
+    {{#paper-content}}
+        {{#paper-list}}
+            {{#paper-item action="transitionTo" param="index"}}Home{{/paper-item}}
+            {{#paper-item action="transitionTo" param="index"}}Another Link{{/paper-item}}
+        {{/paper-list}}
+    {{/paper-content}}
+{{/paper-sidenav}}
 
-{{outlet}}
+<div layout="column" tabindex="-1" role="main" flex>
+    {{#paper-toolbar}}
+        <div class="md-toolbar-tools">
+            {{#paper-sidenav-toggle as |toggle|}}
+                {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon icon="menu"}}{{/paper-button}}
+            {{/paper-sidenav-toggle}}
+            <span class="md-breadcrumb-page">Title</span>
+        </div>
+    {{/paper-toolbar}}    
+    {{#paper-content class="md-padding"}}
+        {{outlet}}
+    {{/paper-content}}
+</div>
+{{/paper-nav-container}}
+
