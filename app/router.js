@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('pet', {
     path: 'pet/:id'
   });
+  this.route('pets');
 });
 
 export default Router;
