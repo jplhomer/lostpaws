@@ -1,8 +1,10 @@
+{{#link-to "pet" 1}}
 {{#paper-item class="md-3-line"}}
-    <img src="http://www.iowapetalert.com/wp-content/uploads/2015/12/FB_IMG_1437481253595-600x600.jpg" alt="Pet Name" class="md-avatar" />
+    <img src="http://www.iowapetalert.com/wp-content/uploads/2015/12/FB_IMG_1437481253595-600x600.jpg" alt="{{pet.name}}" class="md-avatar" />
     <div class="md-list-item-text">
-        <h3>Pet Name</h3>
-        <h4>Dog, Brown, Golden Retriever</h4>
-        <p>Last seen on the streets of Des Moines, IA</p>
+        <h3>{{pet.name}}</h3>
+        <h4>{{pet.type}}, {{pet.color}}, {{pet.breed}}</h4>
+        <p>{{pet.details}}</p>
     </div>
 {{/paper-item}}
+{{/link-to}}
